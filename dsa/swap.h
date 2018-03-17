@@ -23,4 +23,19 @@ swap
 	//std::cout << "after a " << *a << " b " << *b << "\n";
 }
 
+inline void
+print_sort
+(
+	int *array,
+	int num_of_elements
+)
+{
+	std::cout << "Sort Step Total Elements [" << num_of_elements << "] : ";
+	for (int i = 0; i < num_of_elements; i++)
+	{
+		std::cout << array[i] << " ";
+	}
+	std::cout << "\n";
+}
+
 #endif

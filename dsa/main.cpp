@@ -4,6 +4,7 @@
 #include "swap.h"
 #include "sort_bubble.h"
 #include "sort_selection.h"
+#include "sort_insertion.h"
 
 using namespace std;
 
@@ -59,12 +60,26 @@ test_sort_selection
 )
 {
 	std::cout << "Start Selection Sort test\n";
-	int x[] = { 2, 7, 4, 1, 5, 3 };
+	int x[] = { 7, 2, 4, 1, 5, 3 };
 	sort_selection(x,sizeof(x)/sizeof(int));
 	print_sort_selection(x, sizeof(x) / sizeof(int));
 	std::cout << "End Selection Sort test\n";
 	return;
 }
+
+static void
+test_sort_insertion
+(
+	void
+)
+{
+	std::cout << "Start Insertion Sort test\n";
+	int x[] = { 7, 2, 4, 1, 5, 3 };
+	sort_insertion(x, sizeof(x) / sizeof(int));
+	std::cout << "End Insertion Sort test\n";
+	return;
+}
+
 
 int main
 (
@@ -89,9 +104,13 @@ int main
 	// -----------------
 	// Selection Sort Test
 	// -----------------
-	test_sort_selection();
+	//test_sort_selection();
 
-	
+	// -----------------
+	// Insertion Sort Test
+	// -----------------
+	test_sort_insertion();
+
 	cout << "End of main";
 
 	return 0;
