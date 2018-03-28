@@ -5,6 +5,7 @@
 #include "sort_bubble.h"
 #include "sort_selection.h"
 #include "sort_insertion.h"
+#include "sort_merge.h"
 
 using namespace std;
 
@@ -80,6 +81,19 @@ test_sort_insertion
 	return;
 }
 
+static void
+test_sort_merge
+(
+	void
+)
+{
+	std::cout << "Start Merge Sort test\n";
+	int x[] = { 2, 4, 1, 6, 8, 5, 3, 7 };
+	sort_merge(x, sizeof(x) / sizeof(int));
+	print_sort(x, sizeof(x) / sizeof(int));
+	std::cout << "End Merge Sort test\n";
+	return;
+}
 
 int main
 (
@@ -109,7 +123,13 @@ int main
 	// -----------------
 	// Insertion Sort Test
 	// -----------------
-	test_sort_insertion();
+	//test_sort_insertion();
+
+	// -----------------
+	// Merge Sort Test
+	// -----------------
+	test_sort_merge();
+
 
 	cout << "End of main";
 
