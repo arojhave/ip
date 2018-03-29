@@ -6,6 +6,7 @@
 #include "sort_selection.h"
 #include "sort_insertion.h"
 #include "sort_merge.h"
+#include "sort_quick.h"
 
 using namespace std;
 
@@ -95,6 +96,21 @@ test_sort_merge
 	return;
 }
 
+static void
+test_sort_quick
+(
+	void
+)
+{
+	std::cout << "Start Quick Sort test\n";
+	int x[] = { 7, 2, 1, 6, 8, 5, 3, 4 };
+	sort_quick(x, 0, (sizeof(x) / sizeof(int) ) -1);
+	print_sort(x, sizeof(x) / sizeof(int));
+	std::cout << "End Quick Sort test\n";
+	return;
+}
+
+
 int main
 (
 	void
@@ -128,8 +144,12 @@ int main
 	// -----------------
 	// Merge Sort Test
 	// -----------------
-	test_sort_merge();
+	//test_sort_merge();
 
+		// -----------------
+	// Quick Sort Test
+	// -----------------
+	test_sort_quick();
 
 	cout << "End of main";
 
