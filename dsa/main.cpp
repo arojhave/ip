@@ -7,6 +7,7 @@
 #include "sort_insertion.h"
 #include "sort_merge.h"
 #include "sort_quick.h"
+#include "numeric.h"
 
 using namespace std;
 
@@ -146,10 +147,16 @@ int main
 	// -----------------
 	//test_sort_merge();
 
-		// -----------------
+    // -----------------
 	// Quick Sort Test
 	// -----------------
-	test_sort_quick();
+	//test_sort_quick();
+
+	// -----------------
+	// Numeric : Is Prime
+	// -----------------
+	int n = 7;
+	cout << n << " isPrime " << isPrime(n) << endl;
 
 	cout << "End of main";
 
